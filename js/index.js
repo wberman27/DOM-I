@@ -42,7 +42,11 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-//Nav
+
+
+
+
+//Nav ****
 //get nav and set as array
 const nav = document.querySelectorAll("nav a");
 const navArray = Array.from(nav)
@@ -66,11 +70,17 @@ const contact = navArray[5];
 contact.textContent = siteContent["nav"]["nav-item-6"]
 
 
-//CTA
+
+
+
+
+
+
+//CTA ****
 //code snippet img
 
 const codeImg = document.getElementById("cta-img");
-codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+codeImg.setAttribute("src", siteContent["cta"]["img-src"])
 
 //cta text (dom is awesome)
 const awesomeDom = document.querySelector(".cta h1");
@@ -81,7 +91,14 @@ const button = document.querySelector(".cta button");
 button.textContent = siteContent["cta"]["button"];
 
 
-//Main-content
+
+
+
+
+
+//Main-content ****
+
+//top content
 //top content headers Array
 const topContentHeader = document.querySelectorAll(".top-content .text-content h4");
 const topHArray = Array.from(topContentHeader);
@@ -106,3 +123,42 @@ featureP.textContent = siteContent["main-content"]["features-content"];
 const aboutP = topPArray[1];
 aboutP.textContent = siteContent["main-content"]["about-content"];
 
+//content image
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+
+//bottom-content
+//bottom content headers Array
+const botContentHeader = document.querySelectorAll(".bottom-content .text-content h4");
+const botHArray = Array.from(botContentHeader);
+
+//services content header
+const serviceH = botHArray[0];
+serviceH.textContent = siteContent["main-content"]["services-h4"]
+
+//product content header
+const productH = botHArray[1];
+productH.textContent = siteContent["main-content"]["product-h4"]
+
+//vision content header
+const visionH = botHArray[2];
+visionH.textContent = siteContent["main-content"]["vision-h4"]
+
+
+//bottom content paragraph Array
+const botContentP = document.querySelectorAll(".bottom-content .text-content p");
+const botPArray = Array.from(botContentP);
+
+//services P
+const servicesP = botPArray[0];
+servicesP.textContent = siteContent["main-content"]["services-content"];
+
+//procuct P
+const productP = botPArray[1];
+productP.textContent = siteContent["main-content"]["product-content"];
+
+//vision P
+const visionP = botPArray[2];
+visionP.textContent = siteContent["main-content"]["vision-content"];
