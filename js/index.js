@@ -42,8 +42,44 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+//Nav
+//get nav and set as array
 const nav = document.querySelectorAll("nav a");
 const navArray = Array.from(nav)
+//make each a tag in array have appropriate text
+const services = navArray[0];
+services.textContent = siteContent["nav"]["nav-item-1"]
 
-const services = document.querySelector("")
-console.log(navArray);
+const product = navArray[1];
+product.textContent = siteContent["nav"]["nav-item-2"]
+
+const vision = navArray[2];
+vision.textContent = siteContent["nav"]["nav-item-3"]
+
+const features = navArray[3];
+features.textContent = siteContent["nav"]["nav-item-4"]
+
+const about = navArray[4];
+about.textContent = siteContent["nav"]["nav-item-5"]
+
+const contact = navArray[5];
+contact.textContent = siteContent["nav"]["nav-item-6"]
+
+
+//CTA
+//code snippet img
+
+const codeImg = document.getElementById("cta-img");
+codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//cta text (dom is awesome)
+const awesomeDom = document.querySelector('.cta h1');
+awesomeDom.textContent = siteContent["cta"]["h1"];
+
+//'get started' button
+const button = document.querySelector('.cta button');
+button.textContent = siteContent["cta"]["button"];
+
+
+//Main-content
+//top content
