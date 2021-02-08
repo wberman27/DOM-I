@@ -73,13 +73,36 @@ const codeImg = document.getElementById("cta-img");
 codeImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 //cta text (dom is awesome)
-const awesomeDom = document.querySelector('.cta h1');
+const awesomeDom = document.querySelector(".cta h1");
 awesomeDom.textContent = siteContent["cta"]["h1"];
 
 //'get started' button
-const button = document.querySelector('.cta button');
+const button = document.querySelector(".cta button");
 button.textContent = siteContent["cta"]["button"];
 
 
 //Main-content
-//top content
+//top content headers Array
+const topContentHeader = document.querySelectorAll(".top-content .text-content h4");
+const topHArray = Array.from(topContentHeader);
+
+//feature content header
+const feature = topHArray[0];
+feature.textContent = siteContent["main-content"]["features-h4"]
+
+//about content header
+const aboutH = topHArray[1];
+aboutH.textContent = siteContent["main-content"]["about-h4"]
+
+//top content paragraph Array
+const topContentP = document.querySelectorAll(".top-content .text-content p");
+const topPArray = Array.from(topContentP);
+
+//feature P
+const featureP = topPArray[0];
+featureP.textContent = siteContent["main-content"]["features-content"];
+
+//about P
+const aboutP = topPArray[1];
+aboutP.textContent = siteContent["main-content"]["about-content"];
+
