@@ -162,3 +162,34 @@ productP.textContent = siteContent["main-content"]["product-content"];
 //vision P
 const visionP = botPArray[2];
 visionP.textContent = siteContent["main-content"]["vision-content"];
+
+
+
+
+//Contact
+//h4
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+//contact p array
+const contactP = document.querySelectorAll(".contact p");
+const contactArray = Array.from(contactP);
+
+
+//address
+const addressP = contactArray[0];
+addressP.textContent = siteContent["contact"]["address"];
+
+
+//phone
+const phoneP = contactArray[1];
+phoneP.textContent = siteContent["contact"]["phone"];
+
+
+//email
+const emailP = contactArray[2];
+emailP.textContent = siteContent["contact"]["email"];
+
+//footer
+const footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];
