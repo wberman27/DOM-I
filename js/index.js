@@ -69,9 +69,19 @@ about.textContent = siteContent["nav"]["nav-item-5"]
 const contact = navArray[5];
 contact.textContent = siteContent["nav"]["nav-item-6"]
 
+//adding items
+//item one
+const navBlock = document.querySelector("nav"); //take block nav
+const newAOne = document.createElement("a"); //new a new a tag (on dom)
+navBlock.prepend(newAOne); //prepend the a tag onto the nav block
+newAOne.setAttribute("href", "#")
+newAOne.textContent = "Home";
 
-
-
+//item two
+const newATwo = document.createElement("a"); //new a new a tag (on dom)
+navBlock.appendChild(newATwo); //prepend the a tag onto the nav block
+newATwo.setAttribute("href", "#")
+newATwo.textContent = "Extras";
 
 
 
