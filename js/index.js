@@ -40,3 +40,177 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+
+
+//Nav ****
+//get nav and set as array
+const nav = document.querySelectorAll("nav a");
+const navArray = Array.from(nav)
+//make each a tag in array have appropriate text
+const services = navArray[0];
+services.textContent = siteContent["nav"]["nav-item-1"]
+
+const product = navArray[1];
+product.textContent = siteContent["nav"]["nav-item-2"]
+
+const vision = navArray[2];
+vision.textContent = siteContent["nav"]["nav-item-3"]
+
+const features = navArray[3];
+features.textContent = siteContent["nav"]["nav-item-4"]
+
+const about = navArray[4];
+about.textContent = siteContent["nav"]["nav-item-5"]
+
+const contact = navArray[5];
+contact.textContent = siteContent["nav"]["nav-item-6"]
+
+//adding items
+//item one
+const navBlock = document.querySelector("nav"); //take block nav
+const newAOne = document.createElement("a"); //new a new a tag (on dom)
+navBlock.prepend(newAOne); //prepend the a tag onto the nav block
+newAOne.setAttribute("href", "#")
+newAOne.textContent = "Home";
+
+//item two
+const newATwo = document.createElement("a"); //new a new a tag (on dom)
+navBlock.appendChild(newATwo); //prepend the a tag onto the nav block
+newATwo.setAttribute("href", "#")
+newATwo.textContent = "Extras";
+
+//color of nav to Green
+const navA = document.querySelectorAll("nav a"); //select all a in nav (length 8 now)
+const newArray = Array.from(navA); //create array for them
+newArray.forEach(item => { //for each item (a element) in array, style it green
+  item.style.color = "green";
+})
+
+
+
+
+
+
+
+
+//CTA ****
+//code snippet img
+
+const codeImg = document.getElementById("cta-img");
+codeImg.setAttribute("src", siteContent["cta"]["img-src"])
+
+//cta text (dom is awesome)
+const awesomeDom = document.querySelector(".cta h1");
+awesomeDom.textContent = siteContent["cta"]["h1"];
+
+//'get started' button
+const button = document.querySelector(".cta button");
+button.textContent = siteContent["cta"]["button"];
+
+
+
+
+
+
+
+//Main-content ****
+
+//top content
+//top content headers Array
+const topContentHeader = document.querySelectorAll(".top-content .text-content h4");
+const topHArray = Array.from(topContentHeader);
+
+//feature content header
+const feature = topHArray[0];
+feature.textContent = siteContent["main-content"]["features-h4"]
+
+//about content header
+const aboutH = topHArray[1];
+aboutH.textContent = siteContent["main-content"]["about-h4"]
+
+//top content paragraph Array
+const topContentP = document.querySelectorAll(".top-content .text-content p");
+const topPArray = Array.from(topContentP);
+
+//feature P
+const featureP = topPArray[0];
+featureP.textContent = siteContent["main-content"]["features-content"];
+
+//about P
+const aboutP = topPArray[1];
+aboutP.textContent = siteContent["main-content"]["about-content"];
+
+//content image
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+
+//bottom-content
+//bottom content headers Array
+const botContentHeader = document.querySelectorAll(".bottom-content .text-content h4");
+const botHArray = Array.from(botContentHeader);
+
+//services content header
+const serviceH = botHArray[0];
+serviceH.textContent = siteContent["main-content"]["services-h4"]
+
+//product content header
+const productH = botHArray[1];
+productH.textContent = siteContent["main-content"]["product-h4"]
+
+//vision content header
+const visionH = botHArray[2];
+visionH.textContent = siteContent["main-content"]["vision-h4"]
+
+
+//bottom content paragraph Array
+const botContentP = document.querySelectorAll(".bottom-content .text-content p");
+const botPArray = Array.from(botContentP);
+
+//services P
+const servicesP = botPArray[0];
+servicesP.textContent = siteContent["main-content"]["services-content"];
+
+//procuct P
+const productP = botPArray[1];
+productP.textContent = siteContent["main-content"]["product-content"];
+
+//vision P
+const visionP = botPArray[2];
+visionP.textContent = siteContent["main-content"]["vision-content"];
+
+
+
+
+//Contact
+//h4
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+//contact p array
+const contactP = document.querySelectorAll(".contact p");
+const contactArray = Array.from(contactP);
+
+
+//address
+const addressP = contactArray[0];
+addressP.textContent = siteContent["contact"]["address"];
+
+
+//phone
+const phoneP = contactArray[1];
+phoneP.textContent = siteContent["contact"]["phone"];
+
+
+//email
+const emailP = contactArray[2];
+emailP.textContent = siteContent["contact"]["email"];
+
+//footer
+const footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];
