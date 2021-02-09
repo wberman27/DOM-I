@@ -83,6 +83,17 @@ navBlock.appendChild(newATwo); //prepend the a tag onto the nav block
 newATwo.setAttribute("href", "#")
 newATwo.textContent = "Extras";
 
+//color of nav to Green
+const navA = document.querySelectorAll("nav a"); //select all a in nav (length 8 now)
+const newArray = Array.from(navA); //create array for them
+newArray.forEach(item => { //for each item (a element) in array, style it green
+  item.style.color = "green";
+})
+
+
+
+
+
 
 
 
